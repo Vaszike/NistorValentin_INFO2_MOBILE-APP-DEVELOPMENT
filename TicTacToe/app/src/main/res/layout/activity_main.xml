@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+
+        android:id="@+id/gameGrid"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:columnCount="3"
+        android:orientation="horizontal"
+        android:rowCount="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.337">
+
+        <Button
+            android:id="@+id/button00"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="0,0" />
+
+        <Button
+            android:id="@+id/button01"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="0,1" />
+
+        <Button
+            android:id="@+id/button02"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="0,2" />
+
+        <Button
+            android:id="@+id/button10"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="1,0" />
+
+        <Button
+            android:id="@+id/button11"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="1,1" />
+
+        <Button
+            android:id="@+id/button12"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="1,2" />
+
+        <Button
+            android:id="@+id/button20"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="2,0" />
+
+        <Button
+            android:id="@+id/button21"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="2,1" />
+
+        <Button
+            android:id="@+id/button22"
+            style="@style/GameCell"
+            android:background="@drawable/button_border"
+            android:onClick="onCellClick"
+            android:tag="2,2" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:visibility="gone"
+        android:onClick="resetGame"
+        app:layout_constraintTop_toBottomOf="@id/gameGrid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
